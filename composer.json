@@ -1,0 +1,23 @@
+{
+  "name": "anfeng/support",
+  "type": "library",
+  "description": "Common library collection",
+  "keywords": [
+    "arr",
+    "str"
+  ],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "lixx",
+      "email": "sss60@qq.com",
+      "role": "Original Developer"
+    }
+  ],
+  "require": {
+    "php": ">=5.3.3"
+  },
+  "autoload": {
+    "psr-4": {"Anfeng\\support\\": "src/"}
+  }
+}
