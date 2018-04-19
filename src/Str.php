@@ -6,7 +6,7 @@ class Str {
      * @return string 24~25位36进制
      */
     public static function uuid() {
-        return base_convert(md5(uniqid(mt_rand(), true) . microtime() . mt_rand()), 16, 36);;
+        return base_convert(md5(uniqid(mt_rand(), true) . microtime() . mt_rand()), 16, 36);
     }
 
     /**
