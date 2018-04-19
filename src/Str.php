@@ -2,8 +2,8 @@
 
 class Str {
     /**
-     * 生成唯一ID，24~25位36进制
-     * @return string
+     * 生成唯一ID
+     * @return string 24~25位36进制
      */
     public static function uuid() {
         return base_convert(md5(uniqid(mt_rand(), true) . microtime() . mt_rand()), 16, 36);;
