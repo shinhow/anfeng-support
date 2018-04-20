@@ -12,10 +12,12 @@ class Str {
     /**
      * 生成随机字符串
      * @param int $len 长度
-     * @param int $type 随机数组成类型，使用位运算组合：1大写字母，2小写字母，3数字，4符号
+     * @param int $type 随机字符串的组成类型，使用位运算组合：1大写字母，2小写字母，4数字，256符号
      * @return string
      */
-    public static function str_rand($len, $type = 7) {
+    public static function rand($len, $type = 7) {
+        if($len <= 0) return '';
+        
         $chars_array = [
             1 => 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
             2 => 'abcdefghijklmnopqrstuvwxyz',
@@ -31,6 +33,13 @@ class Str {
             }
         }
 
-        return substr(str_shuffle($chars), 0, $len);
+        $str = '';
+        $end = strlen($chars) - 1;
+
+        while($len-- > 0) {
+            $str .= $chars[mt_rand(0, $end)];
+        }
+
+        return $str;
     }
 }
